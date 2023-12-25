@@ -2,6 +2,7 @@ import './App.css';
 import Grid from './LibraryComponents/Grid';
 import GridItem from './LibraryComponents/GridItem';
 import IsVisible from './LibraryComponents/IsVisible';
+import GameGrid from './components/GameGrid';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
             <IsVisible above="lg">
                 <GridItem area="aside">Aside</GridItem>
             </IsVisible>
-            <GridItem area="main">Main</GridItem>
+            <GridItem area="main">
+                <GameGrid />
+            </GridItem>
         </Grid>
     );
 }
