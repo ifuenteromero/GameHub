@@ -2,6 +2,7 @@ import './App.css';
 import Grid from './LibraryComponents/Grid';
 import GridItem from './LibraryComponents/GridItem';
 import IsVisible from './LibraryComponents/IsVisible';
+import NavBar from './components/NavBar';
 
 function App() {
     return (
@@ -11,8 +12,8 @@ function App() {
                 lg: `"nav nav" "aside main"`,
             }}
         >
-            <GridItem area="nav" bgColor="coral">
-                Nav
+            <GridItem area="nav">
+                <NavBar />
             </GridItem>
             <IsVisible above="lg">
                 <GridItem area="aside" bgColor="yellow">
