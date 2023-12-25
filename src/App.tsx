@@ -16,13 +16,9 @@ function App() {
                 <NavBar />
             </GridItem>
             <IsVisible above="lg">
-                <GridItem area="aside" bgColor="yellow">
-                    Aside
-                </GridItem>
+                <GridItem area="aside">Aside</GridItem>
             </IsVisible>
-            <GridItem area="main" bgColor="dodgerblue">
-                Main
-            </GridItem>
+            <GridItem area="main">Main</GridItem>
         </Grid>
     );
 }
