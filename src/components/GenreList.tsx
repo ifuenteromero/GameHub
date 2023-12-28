@@ -1,7 +1,7 @@
 import useGenres from '../hooks/useGenres';
 
 const GenreList = () => {
-    const { genres, error } = useGenres();
+    const { items: genres, error } = useGenres();
     return (
         <>
             {error && <p>{error}</p>}
