@@ -5,7 +5,7 @@ import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
 
 const GameGrid = () => {
-    const { games, error, isLoading } = useGames();
+    const { items: games, error, isLoading } = useGames();
     const GAMES_REQUESTED_COUNT = 20;
     const skeletons = Array.from(
         { length: GAMES_REQUESTED_COUNT },
