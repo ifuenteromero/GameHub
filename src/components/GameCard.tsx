@@ -8,7 +8,7 @@ const GameCard = ({ game }: { game: Game }) => {
     const croppedImageUrl = getCroppedImageUrl(game.background_image);
     return (
         <Card height="100%">
-            <Image src={croppedImageUrl} />
+            <Image src={croppedImageUrl} width="100%" />
             <CardBody>
                 <Heading fontSize="2xl">{game.name}</Heading>
                 <HStack justifyContent="space-between">
