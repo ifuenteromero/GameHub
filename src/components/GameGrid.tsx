@@ -18,7 +18,7 @@ const GameGrid = () => {
             <SimpleGrid
                 padding="10px"
                 columns={{ sm: 1, md: 2, lg: 3, xl: 4, '2xl': 5 }}
-                spacing={10}
+                gap={4}
                 justifyItems="center"
             >
                 {isLoading &&
