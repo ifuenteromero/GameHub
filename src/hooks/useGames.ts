@@ -1,5 +1,6 @@
 import endpoints from '../services/endpoints';
 import useFetchData from './useFetchData';
+import { Genre } from './useGenres';
 
 export interface Platform {
     id: number;
@@ -15,6 +16,9 @@ export interface Game {
     metacritic: number;
 }
 
-const useGames = () => useFetchData<Game>(endpoints.games);
+const useGames = (selectedGenre: Genre | null) =>
+    useFetchData<Game>(endpoints.games, [selectedGenre?.id], {
+        params: { genres: selectedGenre?.id },
+    });
 
 export default useGames;

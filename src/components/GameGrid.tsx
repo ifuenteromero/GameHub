@@ -4,9 +4,14 @@ import GameCard from './GameCard';
 import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
 import { generateSequence } from '../services/utils';
+import { Genre } from '../hooks/useGenres';
 
-const GameGrid = () => {
-    const { items: games, error, isLoading } = useGames();
+interface Props {
+    selectedGenre: Genre | null;
+}
+
+const GameGrid = ({ selectedGenre }: Props) => {
+    const { items: games, error, isLoading } = useGames(selectedGenre);
     const GAMES_REQUESTED_COUNT = 20;
     const skeletons = generateSequence(GAMES_REQUESTED_COUNT);
 
