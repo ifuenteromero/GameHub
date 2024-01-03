@@ -3,14 +3,12 @@ import useGames from '../hooks/useGames';
 import GameCard from './GameCard';
 import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
+import { generateSequence } from '../services/utils';
 
 const GameGrid = () => {
     const { items: games, error, isLoading } = useGames();
     const GAMES_REQUESTED_COUNT = 20;
-    const skeletons = Array.from(
-        { length: GAMES_REQUESTED_COUNT },
-        (_, index) => index + 1
-    );
+    const skeletons = generateSequence(GAMES_REQUESTED_COUNT);
 
     return (
         <>
