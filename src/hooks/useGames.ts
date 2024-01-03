@@ -1,12 +1,7 @@
 import endpoints from '../services/endpoints';
 import useFetchData from './useFetchData';
 import { Genre } from './useGenres';
-
-export interface Platform {
-    id: number;
-    name: string;
-    slug: string;
-}
+import { Platform } from './usePlatforms';
 
 export interface Game {
     id: number;
