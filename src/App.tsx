@@ -27,6 +27,7 @@ function App() {
             <IsVisible above="lg">
                 <GridItem area="aside">
                     <GenreList
+                        selectedGenre={selectedGenre}
                         onSelectGenre={(genre) => setSelectedGenre(genre)}
                     />
                 </GridItem>
