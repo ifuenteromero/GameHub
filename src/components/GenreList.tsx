@@ -10,10 +10,9 @@ const GenreList = () => {
 
     if (error) return null;
 
-    const GenreSkeletons = () => {
         const GENRE_SKELETON_COUNT = 20;
         const skeletons = generateSequence(GENRE_SKELETON_COUNT);
-        return (
+    const GenreSkeletons = (
             <>
                 {skeletons.map((sk) => (
                     <ListItem key={sk}>
@@ -23,10 +22,8 @@ const GenreList = () => {
                 ;
             </>
         );
-    };
 
-    const Genres = () => {
-        return (
+    const Genres = (
             <>
                 {genres.map((genre) => (
                     <ListItem key={genre.id}>
@@ -42,11 +39,10 @@ const GenreList = () => {
                 ))}
             </>
         );
-    };
 
     return (
         <List display="flex" flexDir="column" gap={4}>
-            {isLoading ? <GenreSkeletons /> : <Genres />}
+            {isLoading ? GenreSkeletons : Genres}
         </List>
     );
 };
