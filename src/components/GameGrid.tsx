@@ -5,13 +5,19 @@ import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
 import { generateSequence } from '../services/utils';
 import { Genre } from '../hooks/useGenres';
+import { Platform } from '../hooks/usePlatforms';
 
 interface Props {
     selectedGenre: Genre | null;
+    selectedPlatform: Platform | null;
 }
 
-const GameGrid = ({ selectedGenre }: Props) => {
-    const { items: games, error, isLoading } = useGames(selectedGenre);
+const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {
+    const {
+        items: games,
+        error,
+        isLoading,
+    } = useGames(selectedGenre, selectedPlatform);
     const GAMES_REQUESTED_COUNT = 20;
     const skeletons = generateSequence(GAMES_REQUESTED_COUNT);
 
