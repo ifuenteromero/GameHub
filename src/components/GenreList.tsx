@@ -2,8 +2,8 @@ import { HStack, List, ListItem } from '@chakra-ui/layout';
 import useGenres, { Genre } from '../hooks/useGenres';
 import { Image } from '@chakra-ui/image';
 import getCroppedImageUrl from '../services/image-url';
-import { generateSequence } from '../services/utils';
-import GenreSkeleton from './GenreSkeleton';
+// import { generateSequence } from '../services/utils';
+// import GenreSkeleton from './GenreSkeleton';
 import { Button, Heading } from '@chakra-ui/react';
 
 interface Props {
@@ -12,22 +12,25 @@ interface Props {
 }
 
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
-    const { items: genres, error, isLoading } = useGenres();
+    const {
+        items: genres,
+        // , error, isLoading
+    } = useGenres();
 
-    if (error) return null;
+    // if (error) return null;
 
-    const GENRE_SKELETON_COUNT = 20;
-    const skeletons = generateSequence(GENRE_SKELETON_COUNT);
-    const GenreSkeletons = (
-        <>
-            {skeletons.map((sk) => (
-                <ListItem key={sk}>
-                    <GenreSkeleton />
-                </ListItem>
-            ))}
-            ;
-        </>
-    );
+    // const GENRE_SKELETON_COUNT = 20;
+    // const skeletons = generateSequence(GENRE_SKELETON_COUNT);
+    // const GenreSkeletons = (
+    //     <>
+    //         {skeletons.map((sk) => (
+    //             <ListItem key={sk}>
+    //                 <GenreSkeleton />
+    //             </ListItem>
+    //         ))}
+    //         ;
+    //     </>
+    // );
 
     const Genres = (
         <>
@@ -66,7 +69,8 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
                 Genres
             </Heading>
             <List display="flex" flexDir="column" gap={4}>
-                {isLoading ? GenreSkeletons : Genres}
+                {/* {isLoading ? GenreSkeletons : Genres} */}
+                {Genres}
             </List>
         </>
     );
