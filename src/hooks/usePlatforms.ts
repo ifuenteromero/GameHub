@@ -1,5 +1,6 @@
-import endpoints from '../services/endpoints';
-import useFetchData from './useFetchData';
+import platforms from '../data/platforms';
+// import endpoints from '../services/endpoints';
+// import useFetchData from './useFetchData';
 
 export interface Platform {
     id: number;
@@ -7,6 +8,12 @@ export interface Platform {
     slug: string;
 }
 
-const usePlatforms = () => useFetchData<Platform>(endpoints.platforms);
+// const usePlatforms = () => useFetchData<Platform>(endpoints.platforms);
+
+const usePlatforms = () => ({
+    items: platforms,
+    isLoading: false,
+    error: null,
+});
 
 export default usePlatforms;
