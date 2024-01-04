@@ -14,7 +14,7 @@ import {
 
 import { MdPhoneIphone } from 'react-icons/md';
 import { SiNintendo } from 'react-icons/si';
-import { BsChevronDown, BsGlobe } from 'react-icons/bs';
+import { BsChevronDown, BsGlobe, BsSearch } from 'react-icons/bs';
 
 interface Props extends ChakraIconProps {
     iconName: string;
@@ -32,6 +32,7 @@ const iconComponents: { [key: string]: IconType } = {
     SiNintendo,
     BsGlobe,
     BsChevronDown,
+    BsSearch,
 };
 
 const Icon = ({ iconName, ...restProps }: Props) => {
