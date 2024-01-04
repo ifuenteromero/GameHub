@@ -4,7 +4,7 @@ import { Image } from '@chakra-ui/image';
 import getCroppedImageUrl from '../services/image-url';
 import { generateSequence } from '../services/utils';
 import GenreSkeleton from './GenreSkeleton';
-import { Button } from '@chakra-ui/react';
+import { Button, Heading } from '@chakra-ui/react';
 
 interface Props {
     selectedGenre: Genre | null;
@@ -38,6 +38,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
                     <ListItem key={genre.id}>
                         <HStack>
                             <Image
+                                objectFit="cover"
                                 boxSize="32px"
                                 borderRadius={8}
                                 src={getCroppedImageUrl(genre.image_background)}
@@ -47,6 +48,8 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
                                 variant="link"
                                 fontSize="2xl"
                                 fontWeight={fontWeight}
+                                whiteSpace="normal"
+                                textAlign="left"
                             >
                                 {genre.name}
                             </Button>
@@ -58,9 +61,14 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
     );
 
     return (
-        <List display="flex" flexDir="column" gap={4}>
-            {isLoading ? GenreSkeletons : Genres}
-        </List>
+        <>
+            <Heading fontSize="2xl" marginBottom={4}>
+                Genres
+            </Heading>
+            <List display="flex" flexDir="column" gap={4}>
+                {isLoading ? GenreSkeletons : Genres}
+            </List>
+        </>
     );
 };
 
