@@ -3,6 +3,7 @@ import Icon from './Icon';
 
 const SearchInput = () => {
     return (
+        <form className="search-input__container">
         <InputGroup>
             <InputLeftElement children={<Icon iconName="BsSearch" />} />
             <Input
@@ -11,6 +12,7 @@ const SearchInput = () => {
                 variant="filled"
             />
         </InputGroup>
+        </form>
     );
 };
 
