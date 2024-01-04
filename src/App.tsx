@@ -16,6 +16,7 @@ export interface GameQuery {
     genre: Genre;
     platform: Platform;
     sortOrder: string;
+    textSearch: string;
 }
 
 function App() {
@@ -32,7 +33,11 @@ function App() {
             gap="8px 32px"
         >
             <GridItem area="nav">
-                <NavBar />
+                <NavBar
+                    onSearch={(textSearch) =>
+                        setGameQuery({ ...gameQuery, textSearch })
+                    }
+                />
             </GridItem>
             <IsVisible above="lg">
                 <GridItem area="aside">
