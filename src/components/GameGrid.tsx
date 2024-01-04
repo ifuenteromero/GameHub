@@ -15,28 +15,27 @@ const GameGrid = ({ gameQuery }: Props) => {
     const GAMES_REQUESTED_COUNT = 20;
     const skeletons = generateSequence(GAMES_REQUESTED_COUNT);
 
+    if (error) return <Text>{error}</Text>;
+
     return (
-        <>
-            {error && <Text>{error}</Text>}
-            <SimpleGrid
-                padding="10px"
-                columns={{ sm: 1, md: 2, lg: 3, xl: 4, '2xl': 5 }}
-                gap={4}
-                justifyItems="center"
-            >
-                {isLoading &&
-                    skeletons.map((skeleton) => (
-                        <GameCardContainer key={skeleton}>
-                            <GameCardSkeleton />
-                        </GameCardContainer>
-                    ))}
-                {games.map((game) => (
-                    <GameCardContainer key={game.id}>
-                        <GameCard game={game} />
+        <SimpleGrid
+            padding="10px"
+            columns={{ sm: 1, md: 2, lg: 3, xl: 4, '2xl': 5 }}
+            gap={4}
+            justifyItems="center"
+        >
+            {isLoading &&
+                skeletons.map((skeleton) => (
+                    <GameCardContainer key={skeleton}>
+                        <GameCardSkeleton />
                     </GameCardContainer>
                 ))}
-            </SimpleGrid>
-        </>
+            {games.map((game) => (
+                <GameCardContainer key={game.id}>
+                    <GameCard game={game} />
+                </GameCardContainer>
+            ))}
+        </SimpleGrid>
     );
 };
 
