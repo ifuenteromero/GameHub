@@ -17,7 +17,8 @@ const useGenres = () =>
             apiClient
                 .get<FetchItemsResponse<Genre>>(endpoints.genres)
                 .then((res) => res.data),
-        staleTime: 24 * 60 * 60 * 1000, // 24h
+        // staleTime: 24 * 60 * 60 * 1000, // 24h
+        staleTime: 3_000,
         initialData: { count: genres.length, results: genres },
     });
 

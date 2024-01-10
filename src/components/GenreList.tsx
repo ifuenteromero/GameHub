@@ -12,9 +12,7 @@ interface Props {
 }
 
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
-    const { data, error, isLoading } = useGenres();
-
-    if (error) return null;
+    const { data, isLoading } = useGenres();
 
     const GENRE_SKELETON_COUNT = 20;
     const skeletons = generateSequence(GENRE_SKELETON_COUNT);

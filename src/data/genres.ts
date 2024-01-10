@@ -1,188 +1,188 @@
 export default [
-    {
-        id: 4,
-        name: 'Action',
-        slug: 'action',
-        games_count: 177503,
-        image_background:
-            'https://media.rawg.io/media/games/120/1201a40e4364557b124392ee50317b99.jpg',
-        games: [
-            {
-                id: 3498,
-                slug: 'grand-theft-auto-v',
-                name: 'Grand Theft Auto V',
-                added: 20419,
-            },
-            {
-                id: 3328,
-                slug: 'the-witcher-3-wild-hunt',
-                name: 'The Witcher 3: Wild Hunt',
-                added: 19731,
-            },
-            {
-                id: 4291,
-                slug: 'counter-strike-global-offensive',
-                name: 'Counter-Strike: Global Offensive',
-                added: 16280,
-            },
-            {
-                id: 5286,
-                slug: 'tomb-raider',
-                name: 'Tomb Raider (2013)',
-                added: 16180,
-            },
-            {
-                id: 12020,
-                slug: 'left-4-dead-2',
-                name: 'Left 4 Dead 2',
-                added: 15769,
-            },
-            {
-                id: 5679,
-                slug: 'the-elder-scrolls-v-skyrim',
-                name: 'The Elder Scrolls V: Skyrim',
-                added: 15424,
-            },
-        ],
-    },
-    {
-        id: 51,
-        name: 'Indie',
-        slug: 'indie',
-        games_count: 60952,
-        image_background:
-            'https://media.rawg.io/media/games/baf/baf9905270314e07e6850cffdb51df41.jpg',
-        games: [
-            {
-                id: 1030,
-                slug: 'limbo',
-                name: 'Limbo',
-                added: 13086,
-            },
-            {
-                id: 422,
-                slug: 'terraria',
-                name: 'Terraria',
-                added: 12064,
-            },
-            {
-                id: 3272,
-                slug: 'rocket-league',
-                name: 'Rocket League',
-                added: 11961,
-            },
-            {
-                id: 9767,
-                slug: 'hollow-knight',
-                name: 'Hollow Knight',
-                added: 10467,
-            },
-            {
-                id: 3612,
-                slug: 'hotline-miami',
-                name: 'Hotline Miami',
-                added: 10072,
-            },
-            {
-                id: 3790,
-                slug: 'outlast',
-                name: 'Outlast',
-                added: 10006,
-            },
-        ],
-    },
-    {
-        id: 3,
-        name: 'Adventure',
-        slug: 'adventure',
-        games_count: 137152,
-        image_background:
-            'https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg',
-        games: [
-            {
-                id: 3498,
-                slug: 'grand-theft-auto-v',
-                name: 'Grand Theft Auto V',
-                added: 20419,
-            },
-            {
-                id: 3328,
-                slug: 'the-witcher-3-wild-hunt',
-                name: 'The Witcher 3: Wild Hunt',
-                added: 19731,
-            },
-            {
-                id: 5286,
-                slug: 'tomb-raider',
-                name: 'Tomb Raider (2013)',
-                added: 16180,
-            },
-            {
-                id: 13536,
-                slug: 'portal',
-                name: 'Portal',
-                added: 15846,
-            },
-            {
-                id: 28,
-                slug: 'red-dead-redemption-2',
-                name: 'Red Dead Redemption 2',
-                added: 14914,
-            },
-            {
-                id: 3439,
-                slug: 'life-is-strange-episode-1-2',
-                name: 'Life is Strange',
-                added: 14676,
-            },
-        ],
-    },
-    {
-        id: 5,
-        name: 'RPG',
-        slug: 'role-playing-games-rpg',
-        games_count: 54679,
-        image_background:
-            'https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg',
-        games: [
-            {
-                id: 3328,
-                slug: 'the-witcher-3-wild-hunt',
-                name: 'The Witcher 3: Wild Hunt',
-                added: 19731,
-            },
-            {
-                id: 5679,
-                slug: 'the-elder-scrolls-v-skyrim',
-                name: 'The Elder Scrolls V: Skyrim',
-                added: 15424,
-            },
-            {
-                id: 802,
-                slug: 'borderlands-2',
-                name: 'Borderlands 2',
-                added: 14687,
-            },
-            {
-                id: 58175,
-                slug: 'god-of-war-2',
-                name: 'God of War (2018)',
-                added: 13041,
-            },
-            {
-                id: 3070,
-                slug: 'fallout-4',
-                name: 'Fallout 4',
-                added: 13001,
-            },
-            {
-                id: 278,
-                slug: 'horizon-zero-dawn',
-                name: 'Horizon Zero Dawn',
-                added: 12207,
-            },
-        ],
-    },
+    // {
+    //     id: 4,
+    //     name: 'Action',
+    //     slug: 'action',
+    //     games_count: 177503,
+    //     image_background:
+    //         'https://media.rawg.io/media/games/120/1201a40e4364557b124392ee50317b99.jpg',
+    //     games: [
+    //         {
+    //             id: 3498,
+    //             slug: 'grand-theft-auto-v',
+    //             name: 'Grand Theft Auto V',
+    //             added: 20419,
+    //         },
+    //         {
+    //             id: 3328,
+    //             slug: 'the-witcher-3-wild-hunt',
+    //             name: 'The Witcher 3: Wild Hunt',
+    //             added: 19731,
+    //         },
+    //         {
+    //             id: 4291,
+    //             slug: 'counter-strike-global-offensive',
+    //             name: 'Counter-Strike: Global Offensive',
+    //             added: 16280,
+    //         },
+    //         {
+    //             id: 5286,
+    //             slug: 'tomb-raider',
+    //             name: 'Tomb Raider (2013)',
+    //             added: 16180,
+    //         },
+    //         {
+    //             id: 12020,
+    //             slug: 'left-4-dead-2',
+    //             name: 'Left 4 Dead 2',
+    //             added: 15769,
+    //         },
+    //         {
+    //             id: 5679,
+    //             slug: 'the-elder-scrolls-v-skyrim',
+    //             name: 'The Elder Scrolls V: Skyrim',
+    //             added: 15424,
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: 51,
+    //     name: 'Indie',
+    //     slug: 'indie',
+    //     games_count: 60952,
+    //     image_background:
+    //         'https://media.rawg.io/media/games/baf/baf9905270314e07e6850cffdb51df41.jpg',
+    //     games: [
+    //         {
+    //             id: 1030,
+    //             slug: 'limbo',
+    //             name: 'Limbo',
+    //             added: 13086,
+    //         },
+    //         {
+    //             id: 422,
+    //             slug: 'terraria',
+    //             name: 'Terraria',
+    //             added: 12064,
+    //         },
+    //         {
+    //             id: 3272,
+    //             slug: 'rocket-league',
+    //             name: 'Rocket League',
+    //             added: 11961,
+    //         },
+    //         {
+    //             id: 9767,
+    //             slug: 'hollow-knight',
+    //             name: 'Hollow Knight',
+    //             added: 10467,
+    //         },
+    //         {
+    //             id: 3612,
+    //             slug: 'hotline-miami',
+    //             name: 'Hotline Miami',
+    //             added: 10072,
+    //         },
+    //         {
+    //             id: 3790,
+    //             slug: 'outlast',
+    //             name: 'Outlast',
+    //             added: 10006,
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: 3,
+    //     name: 'Adventure',
+    //     slug: 'adventure',
+    //     games_count: 137152,
+    //     image_background:
+    //         'https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg',
+    //     games: [
+    //         {
+    //             id: 3498,
+    //             slug: 'grand-theft-auto-v',
+    //             name: 'Grand Theft Auto V',
+    //             added: 20419,
+    //         },
+    //         {
+    //             id: 3328,
+    //             slug: 'the-witcher-3-wild-hunt',
+    //             name: 'The Witcher 3: Wild Hunt',
+    //             added: 19731,
+    //         },
+    //         {
+    //             id: 5286,
+    //             slug: 'tomb-raider',
+    //             name: 'Tomb Raider (2013)',
+    //             added: 16180,
+    //         },
+    //         {
+    //             id: 13536,
+    //             slug: 'portal',
+    //             name: 'Portal',
+    //             added: 15846,
+    //         },
+    //         {
+    //             id: 28,
+    //             slug: 'red-dead-redemption-2',
+    //             name: 'Red Dead Redemption 2',
+    //             added: 14914,
+    //         },
+    //         {
+    //             id: 3439,
+    //             slug: 'life-is-strange-episode-1-2',
+    //             name: 'Life is Strange',
+    //             added: 14676,
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: 5,
+    //     name: 'RPG',
+    //     slug: 'role-playing-games-rpg',
+    //     games_count: 54679,
+    //     image_background:
+    //         'https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg',
+    //     games: [
+    //         {
+    //             id: 3328,
+    //             slug: 'the-witcher-3-wild-hunt',
+    //             name: 'The Witcher 3: Wild Hunt',
+    //             added: 19731,
+    //         },
+    //         {
+    //             id: 5679,
+    //             slug: 'the-elder-scrolls-v-skyrim',
+    //             name: 'The Elder Scrolls V: Skyrim',
+    //             added: 15424,
+    //         },
+    //         {
+    //             id: 802,
+    //             slug: 'borderlands-2',
+    //             name: 'Borderlands 2',
+    //             added: 14687,
+    //         },
+    //         {
+    //             id: 58175,
+    //             slug: 'god-of-war-2',
+    //             name: 'God of War (2018)',
+    //             added: 13041,
+    //         },
+    //         {
+    //             id: 3070,
+    //             slug: 'fallout-4',
+    //             name: 'Fallout 4',
+    //             added: 13001,
+    //         },
+    //         {
+    //             id: 278,
+    //             slug: 'horizon-zero-dawn',
+    //             name: 'Horizon Zero Dawn',
+    //             added: 12207,
+    //         },
+    //     ],
+    // },
     {
         id: 10,
         name: 'Strategy',
