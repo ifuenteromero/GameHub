@@ -1,5 +1,5 @@
 import { HStack } from '@chakra-ui/react';
-import { Platform } from '../hooks/usePlatforms';
+import { Platform } from '../services/platformsService';
 import Icon from './Icon';
 
 interface Props {

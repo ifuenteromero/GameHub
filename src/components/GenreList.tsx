@@ -1,10 +1,11 @@
-import { HStack, List, ListItem } from '@chakra-ui/layout';
-import useGenres, { Genre } from '../hooks/useGenres';
 import { Image } from '@chakra-ui/image';
+import { HStack, List, ListItem } from '@chakra-ui/layout';
+import { Button, Heading } from '@chakra-ui/react';
+import useGenres from '../hooks/useGenres';
+import { Genre } from '../services/genresServices';
 import getCroppedImageUrl from '../services/image-url';
 import { generateSequence } from '../services/utils';
 import GenreSkeleton from './GenreSkeleton';
-import { Button, Heading } from '@chakra-ui/react';
 
 interface Props {
     selectedGenre: Genre | null;

@@ -6,12 +6,12 @@ import IsVisible from './LibraryComponents/IsVisible';
 import GameGrid from './components/GameGrid';
 import GenreList from './components/GenreList';
 import NavBar from './components/NavBar';
-import { Genre } from './hooks/useGenres';
 import PlatformSelector from './components/PlatformSelector';
-import { Platform } from './hooks/usePlatforms';
 import SortSelector from './components/SortSelector';
 import { HStack, VStack } from '@chakra-ui/react';
 import GameHeading from './components/GameHeading';
+import { Platform } from './services/platformsService';
+import { Genre } from './services/genresServices';
 
 export interface GameQuery {
     genre: Genre;
