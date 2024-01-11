@@ -4,12 +4,14 @@ import { Platform } from '../services/platformsService';
 import Icon from './Icon';
 
 interface Props {
-    selectedPlatform: Platform | null;
+    selectedPlatformId?: number;
     onSelectPlatform: (platform: Platform) => void;
 }
 
-const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
+const PlatformSelector = ({ onSelectPlatform, selectedPlatformId }: Props) => {
     const { data } = usePlatforms();
+
+    const platform = data.results.find((p) => p.id === selectedPlatformId);
 
     return (
         <Menu>
@@ -17,7 +19,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
                 as={Button}
                 rightIcon={<Icon iconName="BsChevronDown" />}
             >
-                {selectedPlatform?.name || 'Platforms'}
+                {platform?.name || 'Platforms'}
             </MenuButton>
             <MenuList>
                 {data?.results.map((platform) => (
