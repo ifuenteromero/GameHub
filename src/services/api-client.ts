@@ -4,6 +4,7 @@ import endpoints from './endpoints';
 export interface FetchItemsResponse<U> {
     count: number;
     results: U[];
+    next: string | null;
 }
 
 const apiClient = axios.create({
