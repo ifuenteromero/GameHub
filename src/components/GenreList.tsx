@@ -8,11 +8,11 @@ import { generateSequence } from '../services/utils';
 import GenreSkeleton from './GenreSkeleton';
 
 interface Props {
-    selectedGenre: Genre | null;
+    selectedGenreId?: number;
     onSelectGenre: (genre: Genre) => void;
 }
 
-const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
+const GenreList = ({ selectedGenreId, onSelectGenre }: Props) => {
     const { data, isLoading } = useGenres();
 
     const GENRE_SKELETON_COUNT = 20;
@@ -31,7 +31,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
     const Genres = (
         <>
             {data?.results.map((genre) => {
-                const isSelected = selectedGenre?.id === genre.id;
+                const isSelected = selectedGenreId === genre.id;
                 const fontWeight = isSelected ? 'bold' : 'normal';
                 return (
                     <ListItem key={genre.id}>
