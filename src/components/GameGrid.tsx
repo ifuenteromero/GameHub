@@ -1,20 +1,14 @@
 import { Progress, SimpleGrid, Text } from '@chakra-ui/react';
 import { Fragment } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { GameQuery } from '../App';
 import useGames from '../hooks/useGames';
 import { generateSequence } from '../services/utils';
 import GameCard from './GameCard';
 import GameCardContainer from './GameCardContainer';
 import GameCardSkeleton from './GameCardSkeleton';
 
-interface Props {
-    gameQuery: GameQuery;
-}
-
-const GameGrid = ({ gameQuery }: Props) => {
-    const { data, error, isLoading, fetchNextPage, hasNextPage } =
-        useGames(gameQuery);
+const GameGrid = () => {
+    const { data, error, isLoading, fetchNextPage, hasNextPage } = useGames();
 
     const GAMES_REQUESTED_COUNT = 20;
     const skeletons = generateSequence(GAMES_REQUESTED_COUNT);

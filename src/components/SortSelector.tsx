@@ -1,12 +1,8 @@
 import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
+import useGameQueryStore from '../hooks/useGameQueryStore';
 import Icon from './Icon';
 
-interface Props {
-    sortOrder: string;
-    onSelectSortOrder: (sortOrder: string) => void;
-}
-
-const SortSelector = ({ sortOrder = '', onSelectSortOrder }: Props) => {
+const SortSelector = () => {
     const sortOrders = [
         { value: '', label: 'Relevance' },
         { value: '-added', label: 'Date added' },
@@ -15,6 +11,9 @@ const SortSelector = ({ sortOrder = '', onSelectSortOrder }: Props) => {
         { value: '-metacritic', label: 'Popularity' },
         { value: '-rating', label: 'Average rating' },
     ];
+
+    const sortOrder = useGameQueryStore((s) => s.gameQuery.sortOrder) || '';
+    const onSelectSortOrder = useGameQueryStore((s) => s.setSortOrder);
 
     const currentSortOrder = sortOrders.find(
         (order) => order.value === sortOrder
