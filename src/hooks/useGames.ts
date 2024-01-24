@@ -1,6 +1,7 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
+import { Game } from '../entities';
 import { FetchItemsResponse } from '../services/api-client';
-import gamesService, { Game } from '../services/gamesService';
+import gamesService from '../services/gamesService';
 import useGameQueryStore from './useGameQueryStore';
 
 const GAME_SEARCH_PAGE_SIZE = 20;
