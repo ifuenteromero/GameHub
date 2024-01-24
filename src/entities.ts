@@ -13,10 +13,17 @@ export interface Game {
     rating_top: number;
     slug: string;
     description_raw: string;
+    genres: Genre[];
+    publishers: Publisher[];
 }
 
 export interface Genre {
     id: number;
     name: string;
     image_background: string;
+}
+
+export interface Publisher {
+    id: number;
+    name: string;
 }
