@@ -20,7 +20,7 @@ const router = createBrowserRouter(
                     element: <HomePage />,
                 },
                 {
-                    path: relativeRoute(routes.gameDetail(':id')),
+                    path: relativeRoute(routes.gameDetail(':slug')),
                     element: <GameDetailPage />,
                 },
             ],

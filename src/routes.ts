@@ -1,7 +1,7 @@
 const baseUrl = import.meta.env.BASE_URL;
 const root = '/';
 const games = '/games';
-const gameDetail = (id: number | ':id') => `${games}/${id}`;
+const gameDetail = (slug: string) => `${games}/${slug}`;
 
 export default {
     baseUrl,

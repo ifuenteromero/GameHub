@@ -1,26 +1,44 @@
 import { Card, CardBody, HStack, Heading, Image } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import routes from '../routes';
 import { Game } from '../services/gamesService';
 import getCroppedImageUrl from '../services/image-url';
 import CriticScore from './CriticScore';
 import Emoji from './Emoji';
 import PlatformIconList from './PlatformIconList';
 
-const GameCard = ({ game }: { game: Game }) => {
-    const croppedImageUrl = getCroppedImageUrl(game.background_image);
+const GameCard = ({
+    game: {
+        background_image,
+        metacritic,
+        name,
+        parent_platforms,
+        rating_top,
+        slug,
+    },
+}: {
+    game: Game;
+}) => {
+    const croppedImageUrl = getCroppedImageUrl(background_image);
+    const to = routes.gameDetail(slug);
+    const platforms = parent_platforms.map((p) => p.platform);
+
     return (
-        <Card height="100%">
-            <Image src={croppedImageUrl} width="100%" />
-            <CardBody>
-                <HStack justifyContent="space-between" marginBottom={3}>
-                    <PlatformIconList
-                        platforms={game.parent_platforms.map((p) => p.platform)}
-                    />
-                    <CriticScore score={game.metacritic} />
-                </HStack>
-                <Heading fontSize="2xl">{game.name}</Heading>
-                <Emoji rating={game.rating_top} />
-            </CardBody>
-        </Card>
+        <Link to={to}>
+            <Card height="100%">
+                <Image src={croppedImageUrl} width="100%" />
+                <CardBody>
+                    <HStack justifyContent="space-between" marginBottom={3}>
+                        <PlatformIconList platforms={platforms} />
+                        <CriticScore score={metacritic} />
+                    </HStack>
+
+                    <Heading fontSize="2xl">{name}</Heading>
+
+                    <Emoji rating={rating_top} />
+                </CardBody>
+            </Card>
+        </Link>
     );
 };
 

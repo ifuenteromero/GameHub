@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import endpoints from './endpoints';
+import endpoints, { EndpointDetail } from './endpoints';
 
 export interface FetchItemsResponse<U> {
     count: number;
@@ -15,14 +15,25 @@ const apiClient = axios.create({
 });
 
 export default class APIClient<T> {
-    endpoint: string;
+    endpoint: string | EndpointDetail;
 
-    constructor(_endpoint: string) {
+    constructor(_endpoint: string | EndpointDetail) {
         this.endpoint = _endpoint;
+    }
+
+    private getEndpoint(id?: string): string {
+        if (typeof this.endpoint === 'function') {
+            return (this.endpoint as EndpointDetail)(id!);
+        }
+
+        return this.endpoint as string;
     }
 
     getAll = (config?: AxiosRequestConfig) =>
         apiClient
-            .get<FetchItemsResponse<T>>(this.endpoint, config)
+            .get<FetchItemsResponse<T>>(this.getEndpoint(), config)
             .then((res) => res.data);
+
+    get = (id: string) =>
+        apiClient.get<T>(this.getEndpoint(id)).then((res) => res.data);
 }

@@ -16,7 +16,6 @@ const HomePage = () => {
                 lg: `"aside main"`,
             }}
             templateColumns={{ base: '1fr', lg: '200px 1fr' }}
-            paddingX={8}
             gap="8px 32px"
         >
             <IsVisible above="lg">
