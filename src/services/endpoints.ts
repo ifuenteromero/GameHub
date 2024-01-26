@@ -6,6 +6,7 @@ const platforms = '/platforms/lists/parents';
 export type EndpointDetail = (id: string) => string;
 
 const gameDetails: EndpointDetail = (id: string) => `${games}/${id}`;
+const gameTrailers: EndpointDetail = (id: string) => `${games}/${id}/movies`;
 
 export default {
     baseUrl,
@@ -13,4 +14,5 @@ export default {
     genres,
     platforms,
     gameDetails,
+    gameTrailers,
 };
