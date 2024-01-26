@@ -15,7 +15,7 @@ const GameTrailer = ({ gameId }: Props) => {
         <video
             src={firstTrailer.data[480]}
             poster={firstTrailer.preview}
-            style={{ maxHeight: '480px', margin: '20px auto 0' }}
+            style={{ maxHeight: '480px' }}
             controls
         />
     );
