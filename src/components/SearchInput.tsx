@@ -22,7 +22,9 @@ const SearchInput = () => {
 
     return (
         <InputGroup>
-            <InputLeftElement children={<Icon iconName="BsSearch" />} />
+            <InputLeftElement>
+                <Icon iconName="BsSearch" />{' '}
+            </InputLeftElement>
             <Input
                 borderRadius={20}
                 placeholder="Search games..."
