@@ -3,3 +3,5 @@ describe('test suite', () => {
         expect(1).toBe(1);
     });
 });
+
+export {};
